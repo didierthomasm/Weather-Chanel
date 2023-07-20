@@ -9,28 +9,35 @@
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body>
-  <header>
-    <h1>Weather Chanel</h1>
-    <label for="city"></label><input type="text" name="city" id="city">
-    <button type="submit" id="search">Search</button>
+<body class="bg-gray-100 layout-body">
+  <header class="bg-blue-500 py-4 sidebar">
+    <!--class="container mx-auto flex items-center justify-between"-->
+    <div class="container mx-auto layout-navbar">
+      <div class="flex items-center title-logo">
+        <h1 class="text-white text-2xl font-bold mr-2">Weather Wherever</h1>
+        <img src="./assets/img/logo.jpg" alt="Logo" class="w-10 h-10 rounded-full">
+      </div>
+      <form id="searchForm" class="flex items-center form">
+        <label for="cityInput"></label><input type="text" id="cityInput" placeholder="Enter city name" class="p-2 rounded-lg mr-2">
+        <button type="submit" class="px-4 py-2 bg-white text-blue-500 rounded-lg">Search</button>
+      </form>
+      <div id="historyContainer" class="bg-white p-4 mt-4 history-container"></div>
+    </div>
   </header>
 
   <main>
+    <div class="container mx-auto p-4 mt-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
 
+        <div id="weatherContainer" class="col-span-3 md:col-span-1"></div>
+        <div id="forecastContainer" class="col-span-3 md:col-span-2 flex flex-wrap"></div>
+      </div>
+    </div>
   </main>
 
-  <aside>
-    <ul id="cities">
 
-    </ul>
-  </aside>
-
-  <footer>
-
-  </footer>
-
-<!--<script src="https://cdn.tailwindcss.com"></script>-->
+<script src="https://cdn.tailwindcss.com"></script>
 <script src="./assets/js/script.js"></script>
 </body>
 </html>
+
