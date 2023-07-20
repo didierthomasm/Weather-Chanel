@@ -40,6 +40,8 @@ main {
 
 .history-container {
     grid-area: history-container;
+    max-height: 200px;
+    overflow-y: auto;
 }
 
 .layout-weather {
